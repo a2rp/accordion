@@ -1,12 +1,27 @@
-import React from 'react'
-import Accordion from './accordion'
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Accordion from "./components/Accordion";
+import Footer from "./components/Footer";
 
-const App = () => {
+import { Styled } from "./App.styled";
+import Features from "./components/Features";
+
+function App() {
     return (
-        <div>
-            <Accordion />
-        </div>
-    )
+        <Styled.Wrapper id="top">
+            <Header />
+
+            <main>
+                <Hero />
+
+                <Features />
+
+                <Accordion />
+            </main>
+
+            <Footer />
+        </Styled.Wrapper>
+    );
 }
 
-export default App
+export default App;
