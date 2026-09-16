@@ -3,6 +3,7 @@ import {
     FiCodepen,
     FiCoffee,
     FiFacebook,
+    FiGift,
     FiGithub,
     FiGlobe,
     FiHeart,
@@ -58,13 +59,20 @@ const supportLinks = [
         icon: FiCoffee,
     },
     {
-        title: "Email",
-        url: "mailto:ash.ranjan09@gmail.com",
-        icon: FiMail,
+        title: "Buy Me a Coffee",
+        url: "https://buymeacoffee.com/a2rp",
+        icon: FiCoffee,
+    },
+    {
+        title: "Patreon",
+        url: "https://patreon.com/a2rp",
+        icon: FiGift,
     },
 ];
 
 function Footer() {
+    const year = new Date().getFullYear();
+
     return (
         <Styled.Wrapper>
             <div className="container">
@@ -125,8 +133,8 @@ function Footer() {
 
                 <div className="bottom">
                     <span>
-                        © 2026{" "}
-                        <a href="https://ashishranjan.net" target="_blank">
+                        &copy; {year}{" "}
+                        <a href="https://www.ashishranjan.net" target="_blank" rel="noreferrer">
                             Ashish Ranjan
                         </a>{" "}
                         · MIT License

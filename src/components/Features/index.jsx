@@ -8,23 +8,27 @@ const features = [
         title: "Reusable",
         description:
             "Drop the component into any React project with minimal configuration.",
+        image: "practice-1.jpg",
     },
     {
         icon: FiActivity,
         title: "Smooth",
         description:
             "Lightweight expand and collapse animation for a polished experience.",
+        image: "practice-2.jpg",
     },
     {
         icon: FiMonitor,
         title: "Responsive",
         description: "Looks great across desktop, tablet and mobile devices.",
+        image: "practice-3.jpg",
     },
     {
         icon: FiShield,
         title: "Accessible",
         description:
             "Built with semantic HTML and keyboard friendly interactions.",
+        image: "practice-4.jpg",
     },
 ];
 
@@ -42,6 +46,7 @@ function Features() {
 
                         return (
                             <article key={feature.title} className="card">
+                                <img src={`${import.meta.env.BASE_URL}images/${feature.image}`} alt="" loading="lazy" />
                                 <div className="icon">
                                     <Icon />
                                 </div>

@@ -56,6 +56,16 @@ export const Styled = {
             transition: 0.3s ease;
         }
 
+        .card > img {
+            width: calc(100% + 68px);
+            height: 130px;
+            margin: -34px -34px 28px;
+            display: block;
+            object-fit: cover;
+            filter: grayscale(0.35) brightness(0.72);
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
         .card:hover {
             transform: translateY(-8px);
 
@@ -86,6 +96,11 @@ export const Styled = {
             background: #f5f5f5;
             color: #050505;
             transform: rotate(-8deg);
+        }
+
+        .card:hover > img {
+            transform: scale(1.06);
+            filter: grayscale(0) brightness(0.9);
         }
 
         .icon svg {
