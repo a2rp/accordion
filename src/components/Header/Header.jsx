@@ -6,6 +6,7 @@ import styles from "./Header.module.css";
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [headerVisible, setHeaderVisible] = useState(true);
 
     useEffect(() => {
         const closeWithEscape = (event) => {
@@ -17,6 +18,26 @@ function Header() {
         window.addEventListener("keydown", closeWithEscape);
 
         return () => window.removeEventListener("keydown", closeWithEscape);
+    }, []);
+
+    useEffect(() => {
+        let previousScrollY = window.scrollY;
+
+        const updateHeader = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY <= 16 || currentScrollY < previousScrollY) {
+                setHeaderVisible(true);
+            } else if (currentScrollY > previousScrollY) {
+                setHeaderVisible(false);
+            }
+
+            previousScrollY = currentScrollY;
+        };
+
+        window.addEventListener("scroll", updateHeader, { passive: true });
+
+        return () => window.removeEventListener("scroll", updateHeader);
     }, []);
 
     const handleSectionClick = (event, sectionId) => {
@@ -32,7 +53,11 @@ function Header() {
     };
 
     return (
-        <header className={styles.header}>
+        <header
+            className={`${styles.header} ${
+                headerVisible ? styles.visible : styles.hidden
+            }`}
+        >
             <div className={styles.inner}>
                 <a
                     className={styles.brand}

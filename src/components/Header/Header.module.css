@@ -8,6 +8,13 @@
     background: rgba(8, 8, 8, 0.94);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
     backdrop-filter: blur(18px);
+    transform: translateY(0);
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform;
+}
+
+.hidden {
+    transform: translateY(-110%);
 }
 
 .inner {

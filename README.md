@@ -6,7 +6,8 @@ A polished React Accordion component for FAQs, documentation, settings pages and
 
 - Single-item expand and collapse interaction
 - Keyboard-friendly accordion controls
-- Fixed responsive header with a small-screen menu
+- Scroll-aware fixed header with a small-screen menu
+- Header hides while scrolling down and returns while scrolling up
 - Direct section navigation without fixed-header overlap
 - Icon-only footer links with tooltips and a dynamic copyright year
 - Local image assets, social preview and accessible labels
