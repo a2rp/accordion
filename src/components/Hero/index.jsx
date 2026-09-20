@@ -74,7 +74,7 @@ function Hero() {
                 <section className="right">
                     <div className="imageCard">
                         <img
-                            src={`${import.meta.env.BASE_URL}images/hero.jpg`}
+                            src={`${import.meta.env.BASE_URL}images/accordion-hero.jpg`}
                             alt="Accordion Preview"
                         />
 

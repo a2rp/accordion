@@ -8,27 +8,27 @@ const features = [
         title: "Reusable",
         description:
             "Drop the component into any React project with minimal configuration.",
-        image: "practice-1.jpg",
+        image: "reusable-component.jpg",
     },
     {
         icon: FiActivity,
         title: "Smooth",
         description:
             "Lightweight expand and collapse animation for a polished experience.",
-        image: "practice-2.jpg",
+        image: "smooth-transitions.jpg",
     },
     {
         icon: FiMonitor,
         title: "Responsive",
         description: "Looks great across desktop, tablet and mobile devices.",
-        image: "practice-3.jpg",
+        image: "responsive-layout.jpg",
     },
     {
         icon: FiShield,
         title: "Accessible",
         description:
             "Built with semantic HTML and keyboard friendly interactions.",
-        image: "practice-4.jpg",
+        image: "accessible-controls.jpg",
     },
 ];
 

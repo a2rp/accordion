@@ -2,6 +2,8 @@
 
 A responsive React Accordion component for FAQs, documentation, settings pages, and knowledge bases. It includes smooth expand and collapse transitions, accessible controls, responsive layouts, local visuals, and a polished dark interface.
 
+![Accordion preview](accordion-preview.png)
+
 ## Features
 
 - Single-item expand and collapse interaction
