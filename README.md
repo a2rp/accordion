@@ -1,15 +1,18 @@
 # Accordion
 
-A polished React Accordion component for FAQs, documentation, settings pages and knowledge bases. The project focuses on clear interactions, accessible controls, responsive layouts and a focused dark interface.
+A polished React Accordion component for FAQs, documentation, settings pages and knowledge bases. It demonstrates a data-driven accordion, local CSS Modules styling, direct section navigation and a responsive dark interface.
 
 ## Features
 
 - Single-item expand and collapse interaction
 - Keyboard-friendly accordion controls
 - Fixed responsive header with a small-screen menu
-- Direct section navigation without header overlap
+- Direct section navigation without fixed-header overlap
+- Icon-only footer links with tooltips and a dynamic copyright year
 - Local image assets, social preview and accessible labels
 - Responsive layout for desktop, tablet and mobile
+
+The FAQ content is maintained in `src/data/faq.js`, while each component keeps its styles in a matching CSS Module.
 
 ## Tech stack
 
