@@ -1,38 +1,37 @@
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
-import { Styled } from "./styled";
+import styles from "./AccordionItem.module.css";
 
 function AccordionItem({ item, isOpen, onToggle }) {
     const questionId = `question-${item.id}`;
     const answerId = `answer-${item.id}`;
 
     return (
-        <Styled.Wrapper className={isOpen ? "open" : ""}>
+        <article className={`${styles.item} ${isOpen ? styles.open : ""}`}>
             <button
                 type="button"
                 id={questionId}
-                className="accordionButton"
+                className={styles.button}
                 onClick={onToggle}
                 aria-expanded={isOpen}
                 aria-controls={answerId}
             >
                 <span>{item.question}</span>
-
-                {isOpen ? <FiChevronUp /> : <FiChevronDown />}
+                {isOpen ? <FiChevronUp aria-hidden="true" /> : <FiChevronDown aria-hidden="true" />}
             </button>
 
             <div
                 id={answerId}
-                className="content"
+                className={styles.content}
                 role="region"
                 aria-labelledby={questionId}
                 aria-hidden={!isOpen}
             >
-                <div className="contentInner">
+                <div className={styles.contentInner}>
                     <p>{item.answer}</p>
                 </div>
             </div>
-        </Styled.Wrapper>
+        </article>
     );
 }
 

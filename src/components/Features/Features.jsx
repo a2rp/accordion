@@ -1,69 +1,63 @@
 import { FiActivity, FiCode, FiMonitor, FiShield } from "react-icons/fi";
 
-import { Styled } from "./styled";
+import styles from "./Features.module.css";
 
 const features = [
     {
         icon: FiCode,
         title: "Reusable",
-        description:
-            "Drop the component into any React project with minimal configuration.",
+        text: "Drop the component into any React project with minimal configuration.",
         image: "reusable-component.jpg",
     },
     {
         icon: FiActivity,
         title: "Smooth",
-        description:
-            "Lightweight expand and collapse animation for a polished experience.",
+        text: "Lightweight expand and collapse animation for a polished experience.",
         image: "smooth-transitions.jpg",
     },
     {
         icon: FiMonitor,
         title: "Responsive",
-        description: "Looks great across desktop, tablet and mobile devices.",
+        text: "A comfortable experience across desktop, tablet and mobile devices.",
         image: "responsive-layout.jpg",
     },
     {
         icon: FiShield,
         title: "Accessible",
-        description:
-            "Built with semantic HTML and keyboard friendly interactions.",
+        text: "Semantic controls with clear states and keyboard-friendly interaction.",
         image: "accessible-controls.jpg",
     },
 ];
 
 function Features() {
     return (
-        <Styled.Wrapper>
-            <div className="container">
-                <span className="eyebrow">Features</span>
+        <section className={styles.features} id="features" aria-labelledby="features-title">
+            <div className={styles.container}>
+                <span className={styles.eyebrow}>Features</span>
+                <h2 id="features-title">Designed to be simple, reusable and elegant.</h2>
 
-                <h2>Designed to be simple, reusable and elegant.</h2>
-
-                <div className="grid">
+                <div className={styles.grid}>
                     {features.map((feature) => {
                         const Icon = feature.icon;
 
                         return (
-                            <article key={feature.title} className="card">
+                            <article className={styles.card} key={feature.title}>
                                 <img
                                     src={`${import.meta.env.BASE_URL}images/${feature.image}`}
                                     alt={`${feature.title} feature visual`}
                                     loading="lazy"
                                 />
-                                <div className="icon">
-                                    <Icon />
-                                </div>
-
+                                <span className={styles.icon}>
+                                    <Icon aria-hidden="true" />
+                                </span>
                                 <h3>{feature.title}</h3>
-
-                                <p>{feature.description}</p>
+                                <p>{feature.text}</p>
                             </article>
                         );
                     })}
                 </div>
             </div>
-        </Styled.Wrapper>
+        </section>
     );
 }
 

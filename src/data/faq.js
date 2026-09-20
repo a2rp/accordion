@@ -2,41 +2,49 @@ export const faq = [
     {
         id: 1,
         question: "What is an Accordion component?",
-        answer: "An Accordion is a UI component that expands and collapses content sections, helping users view only the information they need.",
+        answer:
+            "An Accordion is a UI component that expands and collapses content sections, helping users view only the information they need.",
     },
     {
         id: 2,
         question: "Why should I use an Accordion?",
-        answer: "It keeps interfaces clean by reducing visual clutter and organizing large amounts of content into expandable sections.",
+        answer:
+            "Accordions organize detailed content into compact sections and make long pages easier to scan on every screen size.",
     },
     {
         id: 3,
         question: "Is this Accordion reusable?",
-        answer: "Yes. The component is designed to be reusable and can be integrated into FAQs, documentation, settings pages, dashboards, and knowledge bases.",
+        answer:
+            "Yes. The component uses data-driven items, so you can replace the questions and answers without changing the interaction logic.",
     },
     {
         id: 4,
         question: "Is it responsive?",
-        answer: "Yes. The layout adapts automatically across desktop, tablet, and mobile devices.",
+        answer:
+            "The layout adapts across desktop, tablet and mobile screens with comfortable spacing and touch-friendly controls.",
     },
     {
         id: 5,
         question: "Can I customize the styling?",
-        answer: "Absolutely. Colors, spacing, typography, animations, borders, and icons can all be customized using styled-components.",
+        answer:
+            "Yes. The project uses CSS Modules, which keeps component styles local and easy to adjust without global naming conflicts.",
     },
     {
         id: 6,
         question: "Does it support animations?",
-        answer: "Yes. The expand and collapse transitions are smooth and lightweight for a polished user experience.",
+        answer:
+            "The open state uses a lightweight grid transition and the cards include subtle hover feedback for a polished experience.",
     },
     {
         id: 7,
         question: "Which technologies are used?",
-        answer: "This project is built with React, Vite, JavaScript, styled-components, and React Icons.",
+        answer:
+            "The project uses React, Vite, JavaScript, CSS Modules and React Icons.",
     },
     {
         id: 8,
         question: "Can multiple items stay open?",
-        answer: "The current implementation opens one item at a time, but it can easily be extended to support multiple expanded sections.",
+        answer:
+            "The demo keeps one item open at a time, while the data-driven structure can be extended to support multiple open items later.",
     },
 ];

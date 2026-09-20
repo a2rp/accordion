@@ -1,26 +1,23 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Accordion from "./components/Accordion";
-import Footer from "./components/Footer";
-
-import { Styled } from "./App.styled";
-import Features from "./components/Features";
+import Accordion from "./components/Accordion/Accordion";
+import Features from "./components/Features/Features";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import styles from "./App.module.css";
 
 function App() {
     return (
-        <Styled.Wrapper id="top">
+        <div className={styles.app} id="top">
             <Header />
 
-            <main id="main-content">
+            <main className={styles.main} id="main-content">
                 <Hero />
-
                 <Features />
-
                 <Accordion />
             </main>
 
             <Footer />
-        </Styled.Wrapper>
+        </div>
     );
 }
 
