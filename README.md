@@ -38,6 +38,13 @@ Deploy with:
 npm run deploy
 ```
 
+## Future prospects
+
+- Support controlled open state and multiple open items
+- Add theme variants for light and dark interfaces
+- Offer optional search and filtering for larger FAQ collections
+- Provide a small reusable component API for other React projects
+
 ## Links
 
 - Portfolio: [https://www.ashishranjan.net/](https://www.ashishranjan.net/)

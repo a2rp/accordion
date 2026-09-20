@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
     FiArrowUp,
     FiCodepen,
@@ -71,7 +72,37 @@ const supportLinks = [
 ];
 
 function Footer() {
+    const [showBackToTop, setShowBackToTop] = useState(false);
     const year = new Date().getFullYear();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowBackToTop(window.scrollY > 420);
+        };
+
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const renderIconLinks = (links) =>
+        links.map((item) => {
+            const Icon = item.icon;
+
+            return (
+                <a
+                    key={item.title}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={item.title}
+                    title={item.title}
+                >
+                    <Icon aria-hidden="true" />
+                </a>
+            );
+        });
 
     return (
         <Styled.Wrapper>
@@ -88,50 +119,20 @@ function Footer() {
                 </div>
 
                 <div className="linksWrapper">
-                    <div>
+                    <div className="linkGroup">
                         <h3>Links</h3>
-
-                        {quickLinks.map((item) => {
-                            const Icon = item.icon;
-
-                            return (
-                                <a
-                                    key={item.title}
-                                    href={item.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Icon />
-                                    <span>{item.title}</span>
-                                </a>
-                            );
-                        })}
+                        <div className="iconLinks">{renderIconLinks(quickLinks)}</div>
                     </div>
 
-                    <div>
+                    <div className="linkGroup">
                         <h3>Support</h3>
-
-                        {supportLinks.map((item) => {
-                            const Icon = item.icon;
-
-                            return (
-                                <a
-                                    key={item.title}
-                                    href={item.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Icon />
-                                    <span>{item.title}</span>
-                                </a>
-                            );
-                        })}
+                        <div className="iconLinks">{renderIconLinks(supportLinks)}</div>
                     </div>
                 </div>
 
                 <div className="bottom">
                     <span>
-                        Copyright © {year}{" "}
+                        Copyright &copy; {year}{" "}
                         <a
                             href="https://www.ashishranjan.net/"
                             target="_blank"
@@ -141,22 +142,18 @@ function Footer() {
                         </a>
                         <span className="license">MIT License</span>
                     </span>
-
-                    <button
-                        type="button"
-                        className="backToTop"
-                        onClick={() => {
-                            window.scrollTo({
-                                top: 0,
-                                behavior: "smooth",
-                            });
-                        }}
-                    >
-                        Back to Top
-                        <FiArrowUp />
-                    </button>
                 </div>
             </div>
+
+            <button
+                type="button"
+                className={`backToTop${showBackToTop ? " visible" : ""}`}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                aria-label="Back to top"
+                title="Back to top"
+            >
+                <FiArrowUp aria-hidden="true" />
+            </button>
         </Styled.Wrapper>
     );
 }
