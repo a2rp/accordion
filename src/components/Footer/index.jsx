@@ -17,7 +17,7 @@ import { Styled } from "./styled";
 const quickLinks = [
     {
         title: "Portfolio",
-        url: "https://www.ashishranjan.net",
+        url: "https://www.ashishranjan.net/",
         icon: FiGlobe,
     },
     {
@@ -37,26 +37,26 @@ const quickLinks = [
     },
     {
         title: "Facebook",
-        url: "https://facebook.com/theash.ashish",
+        url: "https://www.facebook.com/theash.ashish/",
         icon: FiFacebook,
     },
     {
         title: "YouTube",
-        url: "https://youtube.com/@ashishranjan-ashz",
+        url: "https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1",
         icon: FiYoutube,
+    },
+    {
+        title: "Email",
+        url: "mailto:ash.ranjan09@gmail.com",
+        icon: FiMail,
     },
 ];
 
 const supportLinks = [
     {
         title: "Support",
-        url: "https://a2rp-donation-page.netlify.app",
+        url: "https://a2rp-donation-page.netlify.app/",
         icon: FiHeart,
-    },
-    {
-        title: "Buy Me A Coffee",
-        url: "https://buymeacoffee.com/a2rp",
-        icon: FiCoffee,
     },
     {
         title: "Buy Me a Coffee",
@@ -65,7 +65,7 @@ const supportLinks = [
     },
     {
         title: "Patreon",
-        url: "https://patreon.com/a2rp",
+        url: "https://www.patreon.com/a2rp",
         icon: FiGift,
     },
 ];
@@ -89,7 +89,7 @@ function Footer() {
 
                 <div className="linksWrapper">
                     <div>
-                        <h3>Quick Links</h3>
+                        <h3>Links</h3>
 
                         {quickLinks.map((item) => {
                             const Icon = item.icon;
@@ -99,10 +99,9 @@ function Footer() {
                                     key={item.title}
                                     href={item.url}
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                 >
                                     <Icon />
-
                                     <span>{item.title}</span>
                                 </a>
                             );
@@ -120,10 +119,9 @@ function Footer() {
                                     key={item.title}
                                     href={item.url}
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                 >
                                     <Icon />
-
                                     <span>{item.title}</span>
                                 </a>
                             );
@@ -133,11 +131,15 @@ function Footer() {
 
                 <div className="bottom">
                     <span>
-                        &copy; {year}{" "}
-                        <a href="https://www.ashishranjan.net" target="_blank" rel="noreferrer">
+                        Copyright © {year}{" "}
+                        <a
+                            href="https://www.ashishranjan.net/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Ashish Ranjan
-                        </a>{" "}
-                        · MIT License
+                        </a>
+                        <span className="license">MIT License</span>
                     </span>
 
                     <button

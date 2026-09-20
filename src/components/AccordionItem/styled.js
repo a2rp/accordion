@@ -33,14 +33,6 @@ export const Styled = {
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.38);
         }
 
-        &.active {
-            border-color: #5a5a5a;
-
-            background: #131313;
-
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.38);
-        }
-
         .accordionButton {
             width: 100%;
 
@@ -63,6 +55,13 @@ export const Styled = {
 
         .accordionButton:hover {
             background: #151515;
+        }
+
+        .accordionButton:focus-visible {
+            position: relative;
+            z-index: 1;
+            outline: 2px solid #ffffff;
+            outline-offset: -5px;
         }
 
         .accordionButton span {

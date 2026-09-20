@@ -4,6 +4,8 @@ export const Styled = {
     Wrapper: styled.section`
         padding: 20px 0 120px;
 
+        scroll-margin-top: 92px;
+
         .container {
             width: min(calc(100% - 48px), 960px);
             margin: auto;

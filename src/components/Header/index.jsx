@@ -7,7 +7,12 @@ function Header() {
         <Styled.Wrapper>
             <div className="container">
                 <a className="brand" href="#top">
-                    <span className="logo">A</span>
+                    <span className="logo">
+                        <img
+                            src={`${import.meta.env.BASE_URL}logo.png`}
+                            alt=""
+                        />
+                    </span>
 
                     <div className="brandContent">
                         <span className="eyebrow">a2rp</span>
@@ -20,8 +25,8 @@ function Header() {
                     className="githubButton"
                     href="https://github.com/a2rp/accordion"
                     target="_blank"
-                    rel="noreferrer"
-                    aria-label="GitHub Repository"
+                    rel="noopener noreferrer"
+                    aria-label="Open the Accordion repository on GitHub"
                 >
                     <FiGithub />
                 </a>

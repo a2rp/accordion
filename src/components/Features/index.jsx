@@ -46,7 +46,11 @@ function Features() {
 
                         return (
                             <article key={feature.title} className="card">
-                                <img src={`${import.meta.env.BASE_URL}images/${feature.image}`} alt="" loading="lazy" />
+                                <img
+                                    src={`${import.meta.env.BASE_URL}images/${feature.image}`}
+                                    alt={`${feature.title} feature visual`}
+                                    loading="lazy"
+                                />
                                 <div className="icon">
                                     <Icon />
                                 </div>

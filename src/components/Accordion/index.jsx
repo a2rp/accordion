@@ -15,11 +15,11 @@ function Accordion() {
     };
 
     return (
-        <Styled.Wrapper id="accordion">
+        <Styled.Wrapper id="accordion" aria-labelledby="accordion-title">
             <div className="container">
                 <span className="eyebrow">Component Demo</span>
 
-                <h2>
+                <h2 id="accordion-title">
                     Frequently Asked
                     <span> Questions</span>
                 </h2>

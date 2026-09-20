@@ -2,6 +2,7 @@
     "name": "accordion",
     "private": true,
     "version": "1.0.0",
+    "description": "A responsive and accessible React Accordion component with smooth transitions.",
     "type": "module",
     "homepage": "https://a2rp.github.io/accordion/",
     "scripts": {

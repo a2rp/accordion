@@ -83,5 +83,9 @@ export const Styled = {
             position: relative;
             z-index: 1;
         }
+
+        main {
+            padding-top: 74px;
+        }
     `,
 };

@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const Styled = {
     Wrapper: styled.header`
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
         z-index: 100;
-        border-bottom: 1px solid #202020;
-        background: rgba(8, 8, 8, 0.92);
-        backdrop-filter: blur(18px);
+            border-bottom: 1px solid #202020;
+            background: rgba(8, 8, 8, 0.92);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 
         .container {
             width: min(calc(100% - 48px), 1440px);
@@ -46,10 +49,23 @@ export const Styled = {
             transition: 0.25s;
         }
 
+        .logo img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
         .brand:hover .logo {
             background: #f5f5f5;
             color: #050505;
             transform: rotate(-6deg);
+        }
+
+        .brand:focus-visible,
+        .githubButton:focus-visible {
+            outline: 2px solid #ffffff;
+            outline-offset: 5px;
+            border-radius: 12px;
         }
 
         .brandContent {
@@ -109,6 +125,10 @@ export const Styled = {
         @media (max-width: 700px) {
             .container {
                 width: calc(100% - 28px);
+            }
+
+            h1 {
+                font-size: 1rem;
             }
         }
     `,

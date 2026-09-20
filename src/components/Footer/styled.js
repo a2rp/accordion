@@ -123,6 +123,11 @@ export const Styled = {
             font-size: 0.72rem;
         }
 
+        .bottom .license {
+            margin-left: 10px;
+            color: #4f4f4f;
+        }
+
         .bottom span a {
             color: #bdbdbd;
             text-decoration: none;

@@ -11,7 +11,7 @@ function App() {
         <Styled.Wrapper id="top">
             <Header />
 
-            <main>
+            <main id="main-content">
                 <Hero />
 
                 <Features />
